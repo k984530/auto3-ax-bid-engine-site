@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AX Bid Engine | Auto3</title>
+    <meta
+      name="description"
+      content="AI/AX 지원사업, 조달, 파일럿 기회를 찾고 제안서 준비까지 돕는 B2B bid engine."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="AX Bid Engine home">
+        <span class="brand-mark">A3</span>
+        <span>AX Bid Engine</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#packages">Packages</a>
+        <a href="./partner.html">Partners</a>
+        <a href="#signals">Signals</a>
+        <a href="#process">Process</a>
+        <a href="./sample-scan.html">Sample</a>
+        <a href="./paid-scan-request.html">Start</a>
+      </nav>
+      <a class="topbar-cta" href="#scan">Fit scan</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Auto3 revenue experiment 01</p>
+          <h1 id="hero-title">AI/AX 기회를 제안서-ready 상태로 바꿉니다.</h1>
+          <p class="hero-lede">
+            한국 SME, AI 벤더, IT integrator를 위해 지원사업, 조달, 파일럿 기회를 찾고
+            fit score, 증빙 체크리스트, executive summary 초안을 5영업일 안에 정리합니다.
+          </p>
+          <div class="hero-actions" aria-label="Main actions">
+          <a class="button primary" href="#scan">Fit scan 시작</a>
+          <a class="button secondary" href="./active-deadline-board.html">Active deadline board</a>
+          <a class="button secondary" href="./sample-scan.html">샘플 스캔 보기</a>
+          <a class="button secondary" href="#packages">가격 보기</a>
+          </div>
+          <dl class="proof-strip" aria-label="Offer metrics">
+            <div>
+              <dt>5일</dt>
+              <dd>기회 스캔 납기</dd>
+            </div>
+            <div>
+              <dt>10개</dt>
+              <dd>우선 검토 기회</dd>
+            </div>
+            <div>
+              <dt>1건</dt>
+              <dd>초안 작성 대상</dd>
+            </div>
+          </dl>
+        </div>
+
+        <section class="scan-panel" id="scan" aria-labelledby="scan-title">
+          <div class="panel-heading">
+            <p class="eyebrow">Live qualification</p>
+            <h2 id="scan-title">AX Opportunity Fit Scan</h2>
+          </div>
+
+          <form class="scan-form" aria-describedby="scan-note">
+            <label>
+              <span>고객 유형</span>
+              <select id="segment">
+                <option value="vendor">AI 벤더</option>
+                <option value="manufacturer">제조 SME</option>
+                <option value="integrator">IT integrator</option>
+                <option value="consultant">컨설턴트</option>
+              </select>
+            </label>
+
+            <label>
+              <span>목표 프로젝트 규모</span>
+              <select id="projectSize">
+                <option value="small">5천만원 이하</option>
+                <option value="mid" selected>5천만원-3억원</option>
+                <option value="large">3억원-10억원</option>
+                <option value="enterprise">10억원 이상</option>
+              </select>
+            </label>
+
+            <fieldset>
+              <legend>보유 증빙</legend>
+              <div class="segmented" role="radiogroup" aria-label="Proof level">
+                <label>
+                  <input type="radio" name="proof" value="idea" />
+                  <span>아이디어</span>
+                </label>
+                <label>
+                  <input type="radio" name="proof" value="demo" checked />
+                  <span>데모</span>
+                </label>
+                <label>
+                  <input type="radio" name="proof" value="case" />
+                  <span>고객 사례</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <label>
+              <span>마감/긴급도</span>
+              <input id="urgency" type="range" min="1" max="5" value="4" />
+            </label>
+
+            <label class="checkline">
+              <input id="owner" type="checkbox" checked />
+              <span>내부 의사결정자 또는 제안 책임자가 정해져 있음</span>
+            </label>
+          </form>
+
+          <div class="score-output" aria-live="polite">
+            <div>
+              <span class="score-label">Fit score</span>
+              <strong id="score">94</strong>
+            </div>
+            <p id="recommendation">
+              Proposal Sprint로 바로 전환할 수 있는 강한 후보입니다.
+            </p>
+            <a
+              id="requestLink"
+              class="button primary full"
+              href="https://github.com/k984530/auto3-ax-bid-engine-site/issues/new?template=scan-request.md"
+              target="_blank"
+              rel="noopener"
+            >
+              상담 요청 열기
+            </a>
+            <a
+              id="paidScanLink"
+              class="button secondary full"
+              href="./paid-scan-request.html"
+            >
+              유료 스캔 이메일로 시작
+            </a>
+            <a
+              id="privateContactLink"
+              class="button secondary full"
+              href="mailto:alyduho984530@gmail.com?subject=AX%20Bid%20Engine%20private%20kickoff"
+            >
+              비공개 자료 이메일 문의
+            </a>
+          </div>
+          <p id="scan-note" class="fineprint">
+            이 점수는 영업/제안 우선순위 판단용입니다. 지원금, 조달, 계약 수주를 보장하지 않습니다.
+          </p>
+        </section>
+      </section>
+
+      <section class="section" id="packages" aria-labelledby="packages-title">
+        <div class="section-head">
+          <p class="eyebrow">Sell first, automate second</p>
+          <h2 id="packages-title">처음부터 팔 수 있는 패키지</h2>
+        </div>
+        <div class="package-grid">
+          <article class="package">
+            <p class="package-kicker">Entry</p>
+            <h3>AX Opportunity Scan</h3>
+            <p class="price">150만원</p>
+            <ul>
+              <li>기회 10개 매칭</li>
+              <li>fit score와 근거</li>
+              <li>증빙 체크리스트</li>
+              <li>1건 executive summary 초안</li>
+            </ul>
+            <a class="button secondary full" href="./paid-scan-request.html">유료 스캔 시작</a>
+          </article>
+          <article class="package highlighted">
+            <p class="package-kicker">Core</p>
+            <h3>21-Day Proposal Sprint</h3>
+            <p class="price">800만원</p>
+            <ul>
+              <li>제안서 구조와 핵심 문안</li>
+              <li>ROI appendix</li>
+              <li>보안/운영 아키텍처 설명</li>
+              <li>제출 전 review checklist</li>
+            </ul>
+            <a class="button primary full" href="./proposal-sprint-start.html">Proposal Sprint 시작</a>
+          </article>
+          <article class="package">
+            <p class="package-kicker">Deadline</p>
+            <h3>AI Youth Voucher Deadline Sprint</h3>
+            <p class="price">800만원</p>
+            <ul>
+              <li>2026-06-08 15:00 마감 대응</li>
+              <li>10영업일 제안 구조 정리</li>
+              <li>ROI/KPI와 운영/보안 근거</li>
+              <li>제출 전 human review pack</li>
+            </ul>
+            <a class="button secondary full" href="./ai-youth-voucher-sprint.html">AI Youth Sprint 시작</a>
+          </article>
+          <article class="package">
+            <p class="package-kicker">Device deadline</p>
+            <h3>AX Device Deadline Sprint</h3>
+            <p class="price">800만원</p>
+            <ul>
+              <li>2026-06-05 15:00 마감 대응</li>
+              <li>10영업일 실증 구조 정리</li>
+              <li>현장 데이터/KPI와 운영 근거</li>
+              <li>제출 전 human review pack</li>
+            </ul>
+            <a class="button secondary full" href="./ax-device-deadline-sprint.html">AX Device Sprint 시작</a>
+          </article>
+          <article class="package">
+            <p class="package-kicker">Retainer</p>
+            <h3>Bid Engine Desk</h3>
+            <p class="price">월 600만원</p>
+            <ul>
+              <li>월간 기회 브리프</li>
+              <li>제안서 템플릿 관리</li>
+              <li>파트너/고객별 fit scoring</li>
+              <li>pipeline review call</li>
+            </ul>
+            <a class="button secondary full" href="./bid-engine-desk-start.html">Bid Engine Desk 시작</a>
+          </article>
+          <article class="package">
+            <p class="package-kicker">Consortium</p>
+            <h3>Consortium Bid Desk</h3>
+            <p class="price">3,000만원 + 월 1,200만원</p>
+            <ul>
+              <li>컨소시엄 intake matrix</li>
+              <li>multi-buyer fit scoring</li>
+              <li>proposal-room templates</li>
+              <li>weekly executive review</li>
+            </ul>
+            <a class="button secondary full" href="./consortium-desk-start.html">Consortium Desk 시작</a>
+          </article>
+          <article class="package">
+            <p class="package-kicker">NIPA deadlines</p>
+            <h3>NIPA AX Deadline Desk</h3>
+            <p class="price">3,000만원 + 월 1,200만원</p>
+            <ul>
+              <li>4개 활성 NIPA AX/AI 마감 선별</li>
+              <li>컨소시엄 역할과 proof gap 정리</li>
+              <li>제출 owner/human review room</li>
+              <li>고액 desk scope lock</li>
+            </ul>
+            <a class="button secondary full" href="./nipa-ax-deadline-desk.html">NIPA Deadline Desk 시작</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split" aria-labelledby="sample-title">
+        <div>
+          <p class="eyebrow">Proof of work</p>
+          <h2 id="sample-title">상담 전에도 산출물의 모양을 확인할 수 있습니다.</h2>
+          <p>
+            AI 바우처 공급기업을 예시로 한 익명 샘플 스캔을 준비했습니다. 실제 유료 스캔은
+            고객명, 제품, 증빙, 마감일을 확인한 뒤 작성합니다.
+          </p>
+        </div>
+        <div class="sample-callout">
+          <strong>Sample scan</strong>
+          <p>fit score, 기회 우선순위, 증빙 체크리스트, executive summary 초안까지 한 화면에서 확인하세요.</p>
+          <a class="button primary full" href="./sample-scan.html">샘플 스캔 열기</a>
+          <a class="button secondary full" href="./active-deadline-board.html">마감 board 보기</a>
+          <a class="button secondary full" href="./partner.html">파트너용 desk 보기</a>
+          <a class="button secondary full" href="./payment-route-readiness.html">결제 준비 기준 보기</a>
+        </div>
+      </section>
+
+      <section class="section split" id="signals" aria-labelledby="signals-title">
+        <div>
+          <p class="eyebrow">Why now</p>
+          <h2 id="signals-title">AX 예산은 있지만, 제출 가능한 이야기로 바꾸는 팀은 부족합니다.</h2>
+          <p>
+            AI 솔루션과 제조 혁신 수요는 늘고 있지만, 실제 제출물에는 고객 문제, 데이터 준비도,
+            ROI, 보안, 운영 계획이 함께 필요합니다. AX Bid Engine은 이 간극을 좁히는 bid desk입니다.
+          </p>
+        </div>
+        <div class="signal-list" aria-label="Market signals">
+          <div>
+            <span>01</span>
+            <p>공고 탐색보다 중요한 것은 회사별 fit을 빠르게 버리는 능력입니다.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <p>SME는 제안 전담 인력이 부족하고, AI 벤더는 반복 제안서 생산 시간이 큽니다.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <p>서비스로 먼저 팔면 SaaS가 자동화해야 할 반복 작업이 명확해집니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="process" aria-labelledby="process-title">
+        <div class="section-head">
+          <p class="eyebrow">Delivery</p>
+          <h2 id="process-title">5영업일 스캔 프로세스</h2>
+        </div>
+        <ol class="timeline">
+          <li>
+            <strong>Day 1</strong>
+            <span>제품, 고객, 증빙, 목표 예산 확인</span>
+          </li>
+          <li>
+            <strong>Day 2-3</strong>
+            <span>지원사업, 조달, 파일럿 기회 수집 및 fit scoring</span>
+          </li>
+          <li>
+            <strong>Day 4</strong>
+            <span>최우선 1건의 executive summary와 증빙 체크리스트 작성</span>
+          </li>
+          <li>
+            <strong>Day 5</strong>
+            <span>30분 리뷰 call, sprint 또는 retainer 전환 판단</span>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>AX Bid Engine by Auto3</strong>
+        <p>Human-reviewed AI bid preparation. No win guarantees, no fabricated evidence.</p>
+      </div>
+      <a class="button secondary" href="#scan">Fit scan으로 돌아가기</a>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
